@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Nunito', 'sans-serif']
+      },
       colors: {
         primary: 'var(--blue)',
         basetitle: 'var(--base-title)',
