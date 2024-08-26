@@ -1,49 +1,11 @@
-import { LuExternalLink as ExternalLink } from "react-icons/lu";
-import {
-  FaGithub  as Github,
-  FaBuilding as Building,
-  FaUsers as Users
- } from "react-icons/fa6";
-
+import { Outlet } from "react-router-dom";
+import { Header } from "./components/header";
 
 export function App() {
   return (
-    <div className="">
-      <header className="flex flex-col">
-        <img src="/header.png" alt="Header" className="w-full -top-4 inset-0 bg-cover bg-fixed bg-no-repeat" />
-        <div className="mx-auto -mt-28 flex items-center gap-8 rounded-lg bg-baseprofile px-10 py-8 max-w-[864px] w-full">
-          <img src="https://github.com/pedrojorge148.png" alt="Foto do Github" className="size-36 rounded-lg" />
-          <div className="flex flex-col gap-6">
-            <div className="flex flex-col gap-2">
-              <div className="flex items-center justify-between">
-                <h1 className="text-basetitle text-2xl font-bold">Pedro Jorge</h1>
-                <a href="#" className="flex items-center gap-1 text-primary hover:underline leading-none">
-                  GITHUB
-                  <ExternalLink />
-                </a>
-              </div>
-              <span>
-                Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat pulvinar vel mass.
-              </span>
-            </div>
-
-            <div className="flex items-center gap-6">
-              <div className="flex items-center gap-2">
-                <Github className="text-baselabel" />
-                <span>pedrojorge148</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Building className="text-baselabel" />
-                <span>Rocketseat</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Users className="text-baselabel" />
-                <span>32 seguidores</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+    <div className="space-y-16 mb-10">
+      <Header />
+      <Outlet />
     </div>
   )
 }
