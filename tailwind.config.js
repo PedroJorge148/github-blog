@@ -21,9 +21,18 @@ export default {
         baseprofile: 'var(--base-profile)',
         basebackground: 'var(--base-background)',
         baseinput: 'var(--base-input)'
-      }
+      },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.gray.100'),
+          },
+        },
+      }),
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography')
+  ],
 }
 
